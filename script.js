@@ -1,30 +1,30 @@
 // MODEL ////////////////////////////////////////////////////////////////////////////////
-let pikachu = {
-  name: "Pikachu",
-  health: 45,
-  image: "./Images/pikachu.png",
-  level: 8,
-};
-let bulbasaur = {
-  name: "Bulbasaur",
-  health: 70,
-  image: "./Images/bulbasaur.png",
-  level: 12,
-};
-let oranguru = {
-  name: "Oranguru",
-  health: 170,
-  image: "./Images/oranguru.png",
-  level: 45,
-};
-let drowzee = {
-  name: "Drowzee",
-  health: 90,
-  image: "./Images/drowzee.png",
-  level: 33,
-};
-let possiblePokemon = [pikachu, bulbasaur, oranguru, drowzee];
-let randomPokemon;
+let allPokemon = [
+  {
+    name: "Pikachu",
+    health: 45,
+    image: "./Images/pikachu.png",
+    level: 8,
+  },
+  {
+    name: "Bulbasaur",
+    health: 70,
+    image: "./Images/bulbasaur.png",
+    level: 12,
+  },
+  {
+    name: "Oranguru",
+    health: 170,
+    image: "./Images/oranguru.png",
+    level: 45,
+  },
+  {
+    name: "Drowzee",
+    health: 90,
+    image: "./Images/drowzee.png",
+    level: 33,
+  },
+];
 
 let player = {
   name: "Bjarne",
@@ -109,6 +109,6 @@ function catchPokemon() {
 }
 
 function getRandomPokemon() {
-  let randomNum = Math.floor(Math.random() * possiblePokemon.length);
-  randomPokemon = possiblePokemon[randomNum];
+  let randomNum = Math.floor(Math.random() * allPokemon.length);
+  randomPokemon = allPokemon[randomNum];
 }
